@@ -1,0 +1,129 @@
+MACHINE LEARNING
+WORKSHEET – 1
+In Q1 to Q7, only one option is correct, Choose the correct option:
+
+1. The value of correlation coefficient will always be:
+A) between 0 and 1 B) greater than -1
+C) between -1 and 1 D) between 0 and -1
+
+Answer: A 
+
+2. Which of the following cannot be used for dimensionality reduction?
+A) Lasso Regularisation B) PCA
+C) Recursive feature elimination D) Ridge Regularisation
+
+Answer: D	
+
+3. Which of the following is not a kernel in Support Vector Machines?
+A) linear B) Radial Basis Function
+C) hyperplane D) polynomial
+
+Answer: B
+
+4. Amongst the following, which one is least suitable for a dataset having non-linear decision boundaries?
+A) Logistic Regression B) Naïve Bayes Classifier
+C) Decision Tree Classifier D) Support Vector Classifier
+
+Answer: A
+
+5. In a Linear Regression problem, ‘X’ is independent variable and ‘Y’ is dependent variable, where ‘X’ represents weight in pounds. If you convert the unit of ‘X’ to kilograms, then new coefficient of ‘X’ will be?
+(1 kilogram = 2.205 pounds)
+A) 2.205 × old coefficient of ‘X’ B) same as old coefficient of ‘X’
+C) old coefficient of ‘X’ ÷ 2.205 D) Cannot be determined
+
+Answer: B
+
+
+6. As we increase the number of estimators in ADABOOST Classifier, what happens to the accuracy of the model?
+A) remains same B) increases
+C) decreases D) none of the above
+
+Answer: B
+
+
+7. Which of the following is not an advantage of using random forest instead of decision trees?
+A) Random Forests reduce overfitting
+B) Random Forests explains more variance in data then decision trees
+C) Random Forests are easy to interpret
+D) Random Forests provide a reliable feature importance estimate
+
+Answer: C
+
+
+In Q8 to Q10, more than one options are correct, Choose all the correct options:
+
+8. Which of the following are correct about Principal Components?
+A) Principal Components are calculated using supervised learning techniques
+B) Principal Components are calculated using unsupervised learning techniques
+C) Principal Components are linear combinations of Linear Variables.
+D) All of the above
+
+Answer: B & C
+
+
+9. Which of the following are applications of clustering?
+A) Identifying developed, developing and under-developed countries on the basis of factors like GDP, poverty index, employment rate, population and living index
+B) Identifying loan defaulters in a bank on the basis of previous years’ data of loan accounts.
+C) Identifying spam or ham emails
+D) Identifying different segments of disease based on BMI, blood pressure, cholesterol, blood sugar levels.
+
+Answer: A & D
+
+
+10. Which of the following is(are) hyper parameters of a decision tree?
+A) max_depth B) max_features
+C) n_estimators D) min_samples_leaf
+
+Answer: A, B & D
+
+
+
+Q10 to Q15 are subjective answer type questions, Answer them briefly.
+
+11. What are outliers? Explain the Inter Quartile Range(IQR) method for outlier detection.
+Answer:
+An outlier is an object that deviates significantly from the rest of the objects.
+The IQR describes the middle 50% of values when ordered from lowest to highest. 
+To find the interquartile range (IQR), ​first find the median (middle value) of the lower and upper half of the data.
+ These values are quartile 1 (Q1) and quartile 3 (Q3). The IQR is the difference between Q3 and Q1.  
+
+
+12. What is the primary difference between bagging and boosting algorithms?
+Answer:
+Bagging is used when our objective is to reduce the variance of a decision tree. 
+Here the concept is to create a few subsets of data from the training sample, which is chosen randomly with replacement. 
+Now each collection of subset data is used to prepare their decision trees thus, we end up with an ensemble of various models. 
+The average of all the assumptions from numerous tress is used, which is more powerful than a single decision tree.
+
+Boosting is another ensemble procedure to make a collection of predictors. In other words, we fit consecutive trees, usually random samples, 
+and at each step, the objective is to solve net error from the prior trees.
+If a given input is misclassified by theory, then its weight is increased so that the upcoming hypothesis is more likely to classify it correctly 
+by consolidating the entire set at last converts weak learners into better performing models.
+
+
+
+13. What is adjusted R2 in logistic regression. How is it calculated?
+Answer:
+R-squared is a statistical measure of how close the data are to the fitted regression line. It is also known as the coefficient of determination.
+The definition of R-squared is fairly straight-forward; it is the percentage of the response variable variation that is explained by a linear model. Or:
+
+R-squared = Explained variation / Total variation
+R-squared is always between 0 and 100%:
+0% indicates that the model explains none of the variability of the response data around its mean.
+100% indicates that the model explains all the variability of the response data around its mean.
+In general, the higher the R-squared, the better the model fits your data.
+
+
+14. What is the difference between standardisation and normalisation?
+Answer:
+The terms normalization and standardization are sometimes used interchangeably, but they usually refer to different things. 
+Normalization usually means to scale a variable to have a values between 0 and 1, while standardization transforms data to have a mean of zero and a standard deviation of 1. 
+
+
+15. What is cross-validation? Describe one advantage and one disadvantage of using cross-validation.
+Answer:
+Cross-validation is a technique for evaluating ML models by training several ML models on subsets of the available input data and evaluating them on 
+the complementary subset of the data. 
+One advantage of cross validation is more “efficient” use of data as every observation is used for both training and testing.
+One disadvantage of cross-validation is it drastically increases the training time. Earlier you had to train your model only on one training set, 
+but with Cross Validation you have to train your model on multiple training sets. 
