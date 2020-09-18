@@ -1,0 +1,131 @@
+MACHINE LEARNING – WORKSHEET 3
+
+Q1 to Q15 are subjective answer type questions, Answer them briefly.
+
+
+1. Give short description each of Linear, RBF, Polynomial kernels used in SVM.
+Answer:
+Linear Kernel is used when the data is Linearly separable, that is, it can be separated using a single Line. It is one of the most common kernels to be used.
+It is mostly used when there are a Large number of Features in a particular Data Set.
+
+RBF (radial basis function) kernel is used when the boundaries are hypothesized to be curve-shaped.
+RBF kernel uses two main parameters, gamma and C that are related to:
+the decision region (how spread the region is), and
+the penalty for misclassifying a data point respectively.
+Usually, a grid search is needed to conlcude to the values of these two parameters, especially for gamma which is very sensitive to changes. 
+Logarithmic scale values are usually used as a search area for gamma. Grid-searching C, on the other side, usually means trying power of 10 values (0.001, 0.01, … 10, 100 etc).
+
+Polynomial kernel is a kernel function commonly used with support vector machines (SVMs) and other kernelized models, that represents the similarity of 
+vectors (training samples) in a feature space over polynomials of the original variables, allowing learning of non-linear models.
+
+
+2. R-squared or Residual Sum of Squares (RSS) which one of these two is a better measure of goodness of fit of model in regression and why??
+
+R-squared (R2) is a statistical measure that represents the proportion of the variance for a dependent variable that's explained by an independent variable or variables in a regression model.
+A residual sum of squares (RSS) is a statistical technique used to measure the amount of variance in a data set that is not explained by a regression model. 
+Regression is a measurement that helps determine the strength of the relationship between a dependent variable and a series of other changing variables or independent variables.
+
+3. What are TSS (Total Sum of Squares), ESS (Explained Sum of Squares) and RSS (Residual Sum of Squares) in regression. Also mention the equation relating these three metrics with each other.
+Answer:
+TSS or SST (Total Sum of Squares or Sum of Squares Total)
+The sum of squares total, denoted SST, is the squared differences between the observed dependent variable and its mean. 
+You can think of this as the dispersion of the observed variables around the mean – much like the variance in descriptive statistics.
+
+
+
+
+
+
+
+4. What is Gini –impurity index?
+Answer:
+Gini index or Gini impurity measures the degree or probability of a particular variable being wrongly classified when it is randomly chosen. 
+But what is actually meant by ‘impurity’? If all the elements belong to a single class, then it can be called pure. The degree of Gini index varies between 0 and 1,
+where 0 denotes that all elements belong to a certain class or if there exists only one class, and 1 denotes that the elements are randomly distributed across various classes.
+A Gini Index of 0.5 denotes equally distributed elements into some classes
+
+
+5. Are unregularized decision-trees prone to overfitting? If yes, why?
+Answer:
+Decision trees are prone to overfitting, especially when a tree is particularly deep. This is due to the amount of specificity we look at leading to smaller sample of events
+that meet the previous assumptions. This small sample could lead to unsound conclusions. 
+
+6. What is an ensemble technique in machine learning?
+Answer:
+In the world of Statistics and Machine Learning, Ensemble learning techniques attempt to make the performance of the predictive models better by improving their accuracy. 
+Ensemble Learning is a process using which multiple machine learning models (such as classifiers) are strategically constructed to solve a particular problem.
+
+7. What is the difference between Bagging and Boosting techniques?
+Answer:
+Bagging is a way to decrease the variance in the prediction by generating additional data for training from dataset using combinations with repetitions to produce
+multi-sets of the original data. 
+Boosting is an iterative technique which adjusts the weight of an observation based on the last classification. 
+If an observation was classified incorrectly, it tries to increase the weight of this observation. Boosting in general builds strong predictive models.
+
+
+8. what is out-of-bag error in random forests?
+Answer:
+Out-of-bag (OOB) error, also called out-of-bag estimate, is a method of measuring the prediction error of random forests, boosted decision trees, and other machine learning models
+utilizing bootstrap aggregating (bagging) to sub-sample data samples used for training. OOB is the mean prediction error on each training sample xᵢ, 
+using only the trees that did not have xᵢ in their bootstrap sample.
+Subsampling allows one to define an out-of-bag estimate of the prediction performance improvement by evaluating predictions on those observations which were not used
+in the building of the next base learner.
+
+
+9. What is K-fold cross-validation?
+Answer:
+Cross-validation is a resampling procedure used to evaluate machine learning models on a limited data sample.
+The procedure has a single parameter called k that refers to the number of groups that a given data sample is to be split into. 
+As such, the procedure is often called k-fold cross-validation. When a specific value for k is chosen, it may be used in place of k in the reference to the model,
+such as k=10 becoming 10-fold cross-validation.
+
+
+10. What is hyper parameter tuning in machine learning and why it is done?
+Answer:
+In machine learning, hyperparameter optimization or tuning is the problem of choosing a set of optimal hyperparameters for a learning algorithm. A hyperparameter is a parameter
+whose value is used to control the learning process. By contrast, the values of other parameters (typically node weights) are learned.
+These measures are called hyperparameters, and have to be tuned so that the model can optimally solve the machine learning problem. 
+The objective function takes a tuple of hyperparameters and returns the associated loss.Cross-validation is often used to estimate this generalization performance.
+
+
+
+11. What issues can occur if we have a large learning rate in Gradient Descent?
+
+
+12. What is bias-variance trade off in machine learning?
+Answer:
+Bias is the tendancy of an estimator to pick a model for the data that is not structurally correct. A biased estimator is one that makes incorrect assumptions on the model level
+about the dataset. For example, suppose that we use a linear regression model on a cubic function. This model will be biased: it will structurally underestimate the true values
+in the dataset, always, no matter how many points we use.Bias is also known as underfitting. Once we've selected a model bias becomes something that we want to, within reason, reduce.
+
+
+
+
+13. What is the need of regularization in machine learning?
+Answer:
+Regularization is a form of regression, that constrains/ regularizes or shrinks the coefficient estimates towards zero. In other words, this technique discourages 
+learning a more complex or flexible model, so as to avoid the risk of overfitting.
+A simple relation for linear regression looks like this. Here Y represents the learned relation and β represents the coefficient estimates for different variables or predictors(X).
+Y ≈ β0 + β1X1 + β2X2 + …+ βpXp
+The fitting procedure involves a loss function, known as residual sum of squares or RSS. The coefficients are chosen, such that they minimize this loss function.
+
+
+14. Differentiate between Adaboost and Gradient Boosting
+Answer:
+AdaBoost works on improving the areas where the base learner fails. The base learner is a machine learning algorithm which is a weak learner and 
+upon which the boosting method is applied to turn it into a strong learner. Any machine learning algorithm that accept weights on training data can be used as a base learner.
+whereas 
+Gradient Boosting, on the otherhand, uses weak learner and at each step, we add another weak learner to increase the performance and build a strong learner.
+This reduces the loss of the loss function. We iteratively add each model and compute the loss. 
+The loss represents the error residuals(the difference between actual value and predicted value) and using this loss value the predictions are updated to minimise the residuals.
+ 
+ 
+
+
+15. Can we use Logistic Regression for classification of Non-Linear Data? If not, why?
+Answer:
+Logistic Regression has traditionally been used as a linear classifier, i.e. when the classes can be separated in the feature space by linear boundaries.
+Logistic regression is known and used as a linear classifier. It is used to come up with a hyperplane in feature space to separate observations that belong
+to a class from all the other observations that do not belong to that class. The decision boundary is thus linear.
+However, it can also used on non-linear data by optimmizing the data by applying logarithmic function to it in order to predict the decision boundary.
+
