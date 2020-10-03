@@ -1,0 +1,109 @@
+MACHINE LEARNING – WORKSHEET 2
+
+In Q1 to Q5, only one option is correct, Choose the correct option:
+
+1. In which of the following you can say that the model is overfitting?
+A) High R-squared value for train-set and High R-squared value for test-set.
+B) Low R-squared value for train-set and High R-squared value for test-set.
+C) High R-squared value for train-set and Low R-squared value for test-set.
+D) None of the above
+ANSWER: A
+
+
+2. Which among the following is a disadvantage of decision trees?
+A) Decision trees are prone to outliers.
+B) Decision trees are highly prone to overfitting.
+C) Decision trees are not easy to interpret
+D) None of the above.
+ANSWER: D
+
+
+3. Which of the following is an ensemble technique?
+A) SVM B) Logistic Regression
+C) Random Forest D) Decision tree
+ANSWER: C
+
+
+4. Suppose you are building a classification model for detection of a fatal disease where detection of the disease is most important. In this case which of the following metrics you would focus on?
+A) Accuracy B) Sensitivity
+C) Precision D) None of the above.
+ANSWER: A
+
+
+5. The value of AUC (Area under Curve) value for ROC curve of model A is 0.70 and of model B is 0.85. Which of these two models is doing better job in classification?
+A) Model A B) Model B
+C) both are performing equal D) Data Insufficient
+ANSWER: B
+
+
+In Q6 to Q9, more than one options are correct, Choose all the correct options:
+6. Which of the following are the regularization technique in Linear Regression??
+A) Ridge B) R-squared
+C) MSE D) Lasso
+ANSWER: A & D
+
+
+7. Which of the following is not an example of boosting technique?
+A) Adaboost B) Decision Tree
+C) Random Forest D) Xgboost.
+ANSWER: B & C
+
+
+8. Which of the techniques are used for regularization of Decision Trees?
+A) Pruning B) L2 regularization
+C) Restricting the max depth of the tree D) All of the above
+ANSWER: A & C
+
+
+9. Which of the following statements is true regarding the Adaboost technique?
+A) We initialize the probabilities of the distribution as 1/n, where n is the number of data-points
+B) A tree in the ensemble focuses more on the data points on which the previous tree was not performing well
+C) It is example of bagging technique
+D) None of the above
+ANSWER: A & B
+
+
+Q10 to Q15 are subjective answer type questions, Answer them briefly.
+10. Explain how does the adjusted R-squared penalize the presence of unnecessary predictors in the model?
+Answer:
+The adjusted R-squared is a modified version of R-squared that has been adjusted for the number of predictors in the model. The adjusted R-squared increases only if 
+the new term improves the model more than would be expected by chance. It decreases when a predictor improves the model by less than expected by chance. 
+The adjusted R-squared can be negative, but it’s usually not.  It is always lower than the R-squared.
+
+11. Differentiate between Ridge and Lasso Regression.
+Answer:
+Ridge and Lasso regression uses two different penalty functions. Ridge uses l2 where as lasso go with l1. In ridge regression, the penalty is the sum
+of the squares of the coefficients and for the Lasso, it's the sum of the absolute values of the coefficients. 
+It's a shrinkage towards zero using an absolute value (l1 penalty) rather than a sum of squares(l2 penalty).
+
+
+12. What is VIF? What is the suitable value of a VIF for a feature to be included in a regression modelling?
+ANSWER:
+VIF is the reciprocal of the tolerance value ; small VIF values indicates low correlation among variables under ideal conditions VIF<3. 
+However it is acceptable if it is less than 10.
+
+13. Why do we need to scale the data before feeding it to the train the model?
+ANSWER:
+Feature Scaling or Standardization: It is a step of Data Pre Processing which is applied to independent variables or features of data. It basically helps to normalise the data
+within a particular range. Sometimes, it also helps in speeding up the calculations in an algorithm
+
+14. What are the different metrics which are used to check the goodness of fit in linear regression?
+Answer:
+A well-fitting regression model results in predicted values close to the observed data values.Three statistics are used in Ordinary Least Squares (OLS) regression to evaluate
+model fit: R-squared, the overall F-test, and the Root Mean Square Error (RMSE). All three are based on two sums of squares: Sum of Squares Total (SST) and Sum of Squares Error (SSE).
+SST measures how far the data are from the mean, and SSE measures how far the data are from the model’s predicted values. 
+
+
+WORKSHEET
+15. From the following confusion matrix calculate sensitivity, specificity, precision, recall and accuracy.
+
+Actual/Predicted    True     False
+True                1000     50 
+False               250      1250
+
+ANSWER:
+Sensitivity: TP/FN+TP -> (1000/250+1000)-> 1000/1250 -> 0.8
+Specificity: TN/FP+TN -> (1250/1250+50) -> 1250/1300 -> 0.96
+Precision  : TP/TP+FP -> (1000/1000+50) -> 1000/1050 -> 0.95
+Recall:    : TP/FN+TP -> (1000/250+1000)-> 1000/1250 -> 0.8
+Accuracy   : TP+TN/total-> (1000+1250)/1000+200+50+1250 -> 2250/2500 -> 0.9
