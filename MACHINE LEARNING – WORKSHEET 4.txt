@@ -1,0 +1,121 @@
+MACHINE LEARNING – WORKSHEET 4
+
+In Q1 to Q8, only one option is correct, Choose the correct option:
+1. Which of the following in sklearn library is used for hyper parameter tuning?
+A) GridSearchCV() B) RandomizedCV()
+C) K-fold Cross Validation D) None of the above
+Anwer: B
+
+
+2. In which of the below ensemble techniques trees are trained in parallel?
+A) Random forest B) Adaboost
+C) Gradient Boosting D) All of the above
+Answer: A 
+
+
+3. In machine learning, if in the below line of code:
+sklearn.svm.SVC (C=1.0, kernel='rbf', degree=3) we increasing the C hyper parameter, what will happen?
+A) The regularization will increase B) The regularization will decrease
+C) No effect on regularization D) kernel will be changed to linear
+Answer: B
+
+
+4. Check the below line of code and answer the following questions:
+sklearn.tree.DecisionTreeClassifier(*, criterion='gini', splitter='best', max_depth=None, min_samples_split=2)
+
+Which of the following is true regarding max_depth hyper parameter?
+A) It regularizes the decision tree by limiting the maximum depth up to which a tree can be grown.
+B) It denotes the number of children a node can have.
+C) both A & B
+D) None of the above
+Answer: D
+
+
+5. Which of the following is true regarding Random Forests?
+A) It's an ensemble of weak learners.
+B) The component trees are trained in series
+C) In case of classification problem, the prediction is made by taking mode of the class labels predicted by the component trees.
+D)None of the above
+Answer: D
+
+
+6. What can be the disadvantage if the learning rate is very high in gradient descent?
+A) Gradient Descent algorithm can diverge from the optimal solution.
+B) Gradient Descent algorithm can keep oscillating around the optimal solution and may not settle.
+C) Both of them
+D)None of them.
+Answer: B
+
+
+7. As the model complexity increases, what will happen?
+A) Bias will increase, Variance decrease B) Bias will decrease, Variance increase
+C)both bias and variance increase D) Both bias and variance decrease.
+Answer: B
+
+
+8. Suppose I have a linear regression model which is performing as follows:
+Train accuracy=0.95
+Test accuracy=0.75
+Which of the following is true regarding the model?
+A) model is underfitting B) model is overfitting
+C) model is performing good D) None of the above
+Answer: B
+
+
+Q9 to Q15 are subjective answer type questions, Answer them briefly.
+9. Suppose we have a dataset which have two classes A and B. The percentage of class A is 40% and percentage of class B is 60%. Calculate the Gini index and entropy of the dataset.
+10. What are the advantages of Random Forests over Decision Tree?
+Answer:
+Random forests reduce the variance seen in decision trees by:
+Using different samples for training,
+Specifying random feature subsets, 
+Building and combining small (shallow) trees.
+A single decision tree is a weak predictor, but is relatively fast to build. More trees give you a more robust model and prevent overfitting. 
+However, the more trees you have, the slower the process. Each tree in the forest has to be generated, processed, and analyzed. 
+In addition, the more features you have, the slower the process (which can sometimes take hours or even days); Reducing the set of features can dramatically speed up the process.
+Another distinct difference between a decision tree and random forest is that while a decision tree is easy to read—you just follow the path and find a result—a random 
+forest is a tad more complicated to interpret.
+
+
+11. What is the need of scaling all numerical features in a dataset? Name any two techniques used for scaling.
+Answer:
+Scaling is required to rescale the data and it’s used when we want features to be compared on the same scale for our algorithm. And, when all features are in the same scale, 
+it also helps algorithms to understand the relative relationship better.
+Two types for scaling techniques are:
+1. StandardScaler which rescales each column to have 0 mean and 1 Standard Deviation. It standardizes a feature by subtracting the mean and dividing by the standard deviation.
+2. Minmax scaler where each value is subtracted by the minimum value of the respective feature and then divide by 
+the range of original maximum and minimum of the same feature. It has a default range between [0,1].
+
+
+
+WORKSHEET
+12. Write down some advantages which scaling provides in optimization using gradient descent algorithm.
+Answer:
+Gradient descent which is an optimization algorithm often used in Logistic Regression, SVM, Neural Networks etc. is another prominent example where if features are on different scale,
+certain weights are updated faster than others. However, feature scaling helps in causing Gradient Descent to converge much faster as standardizing all the variables on to the 
+same scale, for example, for a linear regression makes it easy to calculate the slope ( y = mx + c) (where we normalize the M parameter to converge faster).
+
+13. In case of a highly imbalanced dataset for a classification problem, is accuracy a good metric to measure the performance of the model. If not, why?
+Answer:
+When dataset is imbalanced for classification  most of the standard metrics like accuracy assume a balanced class distribution,but since imbalanced dataset is highly skewed
+standard metrics like accuracy becomes unreliable or even misleading. Unlike standard evaluation metrics that treat all classes as equally important,imbalanced classification
+problems typically rate classification errors with the minority class as more important than those with the majority class.
+Although widely used, classification accuracy is almost universally inappropriate for imbalanced classification.The reason is, a high accuracy (or low error) is achievable 
+by a no skill model that only predicts the majority class.
+
+
+14. What is “f-score" metric? Write its mathematical formula.
+Answer:
+F1 score is a measure of a test's accuracy. It is calculated from the precision and recall of the test, where the precision is the number of correctly
+identified positive results divided by the number of all positive results, including those not identified correctly, and the recall is the number of correctly identified
+positive results divided by the number of all samples that should have been identified as positive.
+The F1 score is the harmonic mean of the precision and recall. The highest possible value of F1 is 1, indicating perfect precision and recall, and the lowest possible value is 0,
+if either the precision or the recall is zero.
+F1 Score = 2*(Recall * Precision) / (Recall + Precision)
+
+ 
+15. What is the difference between fit(), transform() and fit_transform()?
+Answer:
+fit() computes the mean and std to be used for later scaling; Just a computation is performed, nothing is given to you.
+transform() uses a previously computed mean and std to autoscale the data (subtract mean from all values and then divide it by std).
+fit_transform() does both at the same time.
