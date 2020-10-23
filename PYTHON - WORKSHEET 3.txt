@@ -1,0 +1,180 @@
+PYTHON - WORKSHEET 3
+
+Q1 to Q8 have only one correct answer. Choose the correct option to answer your question.
+1. Which of the following will raise a value error in python?
+A) int(32) B) int(3.2)
+C) int(-3.2) D) int(‘32’)
+Answer: D
+
+2. What will be the output of round(3.567)?
+A) 3.5 B) 3.0
+C) 4 D) 3
+Answer: C
+
+
+3. How is the function pow(a,b,c) evaluated in python?
+A) a**b**c B) (a**b)%c
+C) (a**b)*c D) (a**b)**c
+Answer: B
+
+
+4. What will be the output of print(type(type(int))) in python 3?
+A) <class ‘type’> B) <type ‘type’>
+C) <class ‘int’> D) <type ‘int’>
+Answer: A
+
+
+5. What will be the output of ord(chr(65))?
+A) ‘A’ B) ‘a’
+C) 65 D) TypeError
+Answer: C
+
+
+6. What is called when a function is defined inside a class?
+A) Module B) Function
+C) _init_ function D) Method
+Answer: D
+
+
+7. What will be the output of all([1, 0, 5 ,7])?
+A) 0 B) False
+C) True D) error
+Answer: B
+
+
+8. Is the output of the function abs() the same as that of the function math.fabs()?
+A) Always B) Sometimes
+C) Never D) None of these
+Answer: B
+
+
+Q9 and Q10 have multiple correct answers. Choose all the correct options to answer your question.
+
+9. Select all correct float numbers in python?
+A) -68.7e100 B) 42e3
+C) 4.2038 D) 3.0
+Answer: C&D
+
+
+10. Which of the following is(are) correct statement(s) in python? 
+A) You can pass positional arguments in any order.
+B) You can pass keyword arguments in any order. C) You can call a function with positional and keyword arguments.
+D) Positional arguments must be before keyword arguments in a function call
+Answer: B&C
+
+Q11 to Q15 are programming questions. Answer them in Jupyter Notebook.
+11. Write a python function print pyramid of stars. Level of pyramid should be taken as an input from the user. E.g.
+Input = 5
+Output:
+
+Answer:
+def starPyramid(n): 
+      
+    for i in range(0, n):
+        for j in range(0, i+1): 
+            # printing stars 
+            print("* ",end="") 
+       
+        # ending line after each row 
+        print("\r") 
+		
+starPyramid(5)		
+Output:
+* 
+* * 
+* * * 
+* * * * 
+* * * * * 
+
+
+12. Write a python function print Hourglass pattern. E.g.
+Input = 5
+Output:
+
+Answer:
+def hourGlass(i):
+    character = "*"
+    rows_number = i
+
+    if not(character.endswith(" ")):
+        character+= " " 
+
+    for i in range(rows_number):
+        print(" "*i+character*(rows_number-i))
+    for j in range(1, rows_number+1):
+        print(" "*(rows_number-j)+character*j)
+
+# calling function		
+hourGlass(5)
+Output:
+* * * * * 
+ * * * * 
+  * * * 
+   * * 
+    * 
+    * 
+   * * 
+  * * * 
+ * * * * 
+* * * * * 
+
+
+13. Write a python function to print Pascal’s Triangle. The number of levels in the triangle must be taken as input by user. E.g.
+Input = 5
+Output:
+1
+1 1
+1 2 1
+1 3 3 1
+1 4 6 4 1
+
+
+14. Write a python function to print Diamond Shaped Pattern shown below. Function must take integer input which represents the number of stars in the middle most line. E.g.:
+Input = 5
+Output:
+
+Answer:
+def Diamond(rows): 
+    n = 0
+    for i in range(1, rows + 1): 
+        for j in range (1, (rows - i) + 1): 
+            print(end = " ") 
+          
+        while n != (2 * i - 1): 
+            print("*", end = "") 
+            n = n + 1
+        n = 0
+          
+        print()  
+  
+    k = 1
+    n = 1
+    for i in range(1, rows): 
+        for j in range (1, k + 1): 
+            print(end = " ") 
+        k = k + 1
+          
+        while n <= (2 * (rows - i) - 1): 
+            print("*", end = "") 
+            n = n + 1
+        n = 1
+        print() 
+
+Diamond(5)
+Output:
+		
+	*
+   ***
+  *****
+ *******
+*********
+ *******
+  *****
+   ***
+    *
+
+
+15. Write a python function to print Diamond Shaped Character Pattern shown below. Function must take integer input within range 1 to 26, which represents the rank of alphabet. E.g.:
+Input = 5
+Output:
+
