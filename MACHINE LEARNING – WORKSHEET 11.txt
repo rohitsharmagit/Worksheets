@@ -1,0 +1,123 @@
+MACHINE LEARNING – WORKSHEET 11
+(LINEAR REGRESSION)
+
+In Q1 to Q8, only one option is correct, Choose the correct option:
+
+1. What happens to R2 measure if we add a new feature?
+A) remains same B) always increases
+C) may or may not increase D) always decreases
+Answer: B
+
+
+2. The correct relationship between SST, SSR and SSE is given by:
+A) SSR = SST + SSE B) SST = SSR + SSE
+C) SSE = SSR – SST D) None of the above
+Answer: B
+
+
+3. Residuals in regression analysis can be defined as:
+A) difference between the actual value and the predicted value.
+B) difference between the actual value and the mean of predicted value.
+C) difference between the actual value and mean of dependent variable.
+D) None of the above.
+Answer: A
+
+
+4. In a simple linear regression model, if we change the input variable by 1 unit, then how much output variable will change?
+A) By 1 B) No Change
+C) By its slope D) None of the above
+Answer: C
+
+
+5. If the coefficient of determination is equal to 1, then correlation coefficient:
+A) must also be equal to 1 B) can be either -1 or 1
+C) can be any value between -1 to 1 D) must be -1
+Answer: A
+
+
+6. Which of the following plot is best suited for the linear relationship of continuous variables?
+A) Scatter plot B) Histograms
+C) Pie charts D) All of the above
+Answer: D
+
+
+7. The ratio of MSR/MSE produces:
+A) t-statistics B) f-statistics
+C) z-statistics D) None of the above.
+Answer: B
+
+
+8. Which of the following regularizations uses only L2 normalization for its penalty parameter?
+A) Lasso B) Elastic Nets
+C) Ridge D) All of the above
+Answer: 
+
+
+In Q9 to Q11, more than one options are correct, Choose all the correct options:
+
+9. Which of the following statement/s are true for best fitted line?
+A) It shows the causal relationship between dependent and independent variables
+B) It shows the positive or negative relation between dependent and independent variables
+C) It always goes through origin
+D) It is a straight line that is the best approximation of the given data sets
+Answer: B&C
+
+
+10. Regularizations helps in:
+A) Reducing the training time B) Generalizing the test set
+C) Automatic feature selection D) Grouping the data
+Answer: A&B
+
+
+11. Linear regression can be implemented through:
+A) Normal Equation B) Singular Value Decomposition
+C) Parity checks D) nodes
+Answer: A&C
+
+
+Q12 to Q15 are subjective answer type questions, Answer them briefly.
+
+12. Explain R2 and adjusted R2 metrics?
+Answer: 
+R2
+--
+R-squared, also known as the coefficient determination, defines the degree to which the variance in the dependent variable (or target) 
+can be explained by the independent variable (features).
+Let us understand this with an example — say the R-squared value for a particular model comes out to be 0.7. 
+This means that 70% of the variation in the dependent variable is explained by the independent variables.
+Adjusted R2
+-----------
+The adjusted R-squared is a modified version of R-squared that has been adjusted for the number of predictors in the model. 
+The adjusted R-squared increases only if the new term improves the model more than would be expected by chance. 
+It decreases when a predictor improves the model by less than expected by chance. 
+The adjusted R-squared can be negative, but it’s usually not.  It is always lower than the R-squared.
+
+13. Explain the cost function of linear regression?
+Answer:
+In ML, cost functions are used to estimate how badly models are performing. Put simply, a cost function is a measure of how wrong the model is in 
+terms of its ability to estimate the relationship between X and y. This is typically expressed as a difference or distance between the predicted value and the actual value.
+The cost function (you may also see this referred to as loss or error.) can be estimated by iteratively running the model to compare estimated predictions 
+against “ground truth” — the known values of y.
+
+14. Differentiate SSE, SSR and SST.
+Answer:
+SST
+---
+The sum of squares total, denoted SST, is the squared differences between the observed dependent variable and its mean. You can think of this as the dispersion
+of the observed variables around the mean – much like the variance in descriptive statistics.
+
+SSR
+---
+The second term is the sum of squares due to regression, or SSR. It is the sum of the differences between the predicted value and the mean of the dependent variable.
+Think of it as a measure that describes how well our line fits the data.
+
+SSE
+---
+The last term is the sum of squares error, or SSE. The error is the difference between the observed value and the predicted value.
+It is also known as RSS or residual sum of squares. Residual as in: remaining or unexplained.
+
+
+
+
+
+15. What are the various evaluation metrics for linear regression?
